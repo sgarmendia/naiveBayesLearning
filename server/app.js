@@ -5,9 +5,11 @@ const path = require('path')
 const app = express()
 
 app.use(express.static(path.join(__dirname, '../client')))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
-const routerTwitterSentApp = require('./routes')
+const routerNaiveBayes = require('./routes')
 
-app.use('/', routerTwitterSentApp)
+app.use('/', routerNaiveBayes)
 
 module.exports = app

@@ -1,4 +1,3 @@
-require('dotenv').config()
 global.__base = __dirname;
 
 const app = require('./server/app.js')

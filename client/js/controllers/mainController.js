@@ -1,5 +1,5 @@
-angular.module('twitterApp')
-    .controller('mainController', function ($scope , twitterService) {
+angular.module('bayesApp')
+    .controller('mainController', function ($scope , machineLearningService) {
   
     })
 

@@ -1,4 +1,4 @@
-angular.module('twitterApp' , ['ngRoute'])
+angular.module('bayesApp' , ['ngRoute'])
 
   .config( $routeProvider => {
 
