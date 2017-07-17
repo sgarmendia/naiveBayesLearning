@@ -7,7 +7,7 @@ const teachSentiment = require('./handlers/teach')
 // const search = require('./handlers/search')
 
 
-router.get('/teach', teachSentiment)
+router.post('/teach', teachSentiment)
 // router.get('/predict', predictSentiment)
 // router.get('/search', search)
 

@@ -7,6 +7,10 @@ angular.module('bayesApp' , ['ngRoute'])
         templateUrl: '../templates/main.html',
         controller: 'mainController'
       })
+      .when('/predict', {
+        templateUrl: '../templates/predict.html',
+        controller: 'mainController'
+      })
 
   })
 
