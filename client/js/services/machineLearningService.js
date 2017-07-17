@@ -4,7 +4,7 @@ angular.module('bayesApp')
         function teachSentiment(data) {
 
             return $http.post('/teach', data)
-                .then(response => console.log(response))
+                .then(response => console.log(response.data))
         }
 
         return { teachSentiment }
