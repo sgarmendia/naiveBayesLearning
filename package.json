@@ -1,0 +1,29 @@
+{
+  "name": "naiveBayesLearning",
+  "version": "1.0.0",
+  "description": "An app for testing simple machine learning with bayes theorem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "BigData","Machine Learning"
+  ],
+  "author": "SG",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "twitter": "^1.7.1",
+    "wink-naive-bayes-text-classifier": "^1.1.1"
+  }
+}

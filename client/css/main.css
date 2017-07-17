@@ -1,0 +1,22 @@
+/*
+* {
+  border:1px solid red;
+}*/
+
+.bg {
+    background: -webkit-linear-gradient(top, rgb(135, 224, 253) 0%, rgb(83, 203, 241) 40%, rgb(5, 171, 224) 100%);
+    background: linear-gradient(to bottom, rgb(135, 224, 253) 0%, rgb(83, 203, 241) 40%, rgb(5, 171, 224) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0', GradientType=0);
+    height: 100vh;
+}
+
+header {
+  margin-top: 10px;
+}
+
+
+h1 {
+  color: white;
+  font-family: 'Salsa', cursive;
+  font-size:450%;
+}

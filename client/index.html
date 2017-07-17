@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="twitterApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter Sentiment</title>
+    <link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!-- <div ng-include="'templates/includes/navbar.html'"></div> -->
+    <ng-view></ng-view>
+
+<!-- Loading angular & angular route -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<!-- Loading jQuery & bootstrap -->
+<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- Loading angular mainApp services & controllers  -->
+
+<script src="js/twitterApp.js" type="text/javascript"></script>
+<script src="js/controllers/mainController.js" type="text/javascript"></script>
+<script src="js/services/twitterService.js" type="text/javascript"></script>
+
+
+</body>
+</html>
