@@ -3,7 +3,7 @@ const nlp = require('wink-nlp-utils')
 
 function teachSentiment(req, res) {
 
-    console.log(req.body)
+    // console.log(req.body)
 
     const { teachtext, mood } = req.body
 
@@ -32,10 +32,12 @@ function teachSentiment(req, res) {
     nbc.consolidate()
 
     const result = nbc.predict( 'I love you' )
+    const odds = nbc.computeOdds( 'I love you' )
+    const stats = nbc.stats()
 
     console.log(result)
 
-    res.send(result)
+    res.send(odds)
 
 
 }
