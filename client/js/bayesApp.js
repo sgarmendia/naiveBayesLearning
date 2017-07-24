@@ -4,12 +4,12 @@ angular.module('bayesApp' , ['ngRoute'])
 
     $routeProvider
       .when('/', {
-        templateUrl: '../templates/main.html',
-        controller: 'mainController'
-      })
-      .when('/predict', {
         templateUrl: '../templates/predict.html',
-        controller: 'mainController'
+        controller: 'predictController'
+      })
+      .when('/teach', {
+        templateUrl: '../templates/teach.html',
+        controller: 'teachController'
       })
 
   })

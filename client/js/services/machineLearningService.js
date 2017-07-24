@@ -7,6 +7,16 @@ angular.module('bayesApp')
                 .then(response => console.log(response.data))
         }
 
-        return { teachSentiment }
+        function predictSentiment(data) {
+
+            return $http.post('/predict', data)
+                .then(response => console.log(response.data))
+        }
+
+
+        return {
+            teachSentiment,
+            predictSentiment
+        }
 
     })
