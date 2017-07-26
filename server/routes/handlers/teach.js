@@ -31,7 +31,7 @@ function teachSentiment(req, res) {
     json[3][mood] = sumMood
 
     const sJson = JSON.stringify(json)
-    fs.writeFile('./learning/newJson.json', sJson, err => { if (err) throw err })
+    fs.writeFile('./learning/learnjson.json', sJson, err => { if (err) throw err })
 
     res.send(sJson)
 
