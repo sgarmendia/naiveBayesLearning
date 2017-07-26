@@ -6,10 +6,11 @@ function teachSentiment(req, res) {
 
     const { teachtext, mood } = req.body
 
+    const aText = teachtext.split(' ')
+
     let json = JSON.parse(fs.readFileSync('./learning/learnJson.json', 'utf8'))
 
     json[1][mood] += 1
-    const aText = teachtext.split(' ')
     let oMood = json[2][mood]
     let sumMood = 0
 

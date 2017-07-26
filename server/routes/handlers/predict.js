@@ -4,8 +4,6 @@ const fs = require('fs')
 
 function predictSentiment(req, res) {
 
-    // console.log(req.body)
-
     const { predicttext } = req.body
 
     nbc.definePrepTasks([
@@ -18,19 +16,8 @@ function predictSentiment(req, res) {
     ]);
 
     // nbc.defineConfig({ considerOnlyPresence: true, smoothingFactor: 0.5 })
-    // Train! 
-    // nbc.learn(teachtext, mood)
-    // nbc.learn('I like you', 'positive')
-    // nbc.learn('I adore you', 'positive')
-    // nbc.learn('I kiss you', 'positive')
-    // nbc.learn('I hug you', 'positive')
-    // nbc.learn('I hate you', 'negative')
-    // nbc.learn('I kill you', 'negative')
-    // nbc.learn('I loath you', 'negative')
-    // nbc.learn('I despise you', 'negative')
-    // nbc.learn('I kick you', 'negative')
 
-    let json = fs.readFileSync('./learning/learnJson.json', 'utf8')
+    const json = fs.readFileSync('./learning/learnJson.json', 'utf8')
 
     nbc.importJSON( json )
 
@@ -39,13 +26,12 @@ function predictSentiment(req, res) {
     const result = nbc.predict( predicttext )
     const odds = nbc.computeOdds( predicttext )
     // const stats = nbc.stats()
-    // const eval =nbc.evaluate('I love you', 'positive')
+    // const eval =nbc.evaluate(predicttext, 'positive')
     // const metrics = nbc.metrics()
     // const json = nbc.exportJSON()
 
-    json = JSON.parse(json)
 
-    res.send({result , odds , json})
+    res.send({result , odds})
 
 }
 
