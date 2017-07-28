@@ -1,20 +1,23 @@
-
 .bg {
-    height: 100vh;
+  height: 100vh;
+  background-color: #b8bcc3;
 }
 
 header {
-    margin-top: 10px;
+  padding-top: 10px;
 }
-
 
 h1 {
-    color: black;
-    font-family: 'Exo', sans-serif;
-    font-size: 450%;
+  color: black;
+  font-family: 'Exo', sans-serif;
+  font-size: 400%;
 }
 
-h2 {
-    color: black;
-    font-family: 'Exo', sans-serif;
+h4, h3, h2 {
+  color: black;
+  font-family: 'Exo', sans-serif;
+}
+
+div.result {
+  padding-top: 20px;
 }

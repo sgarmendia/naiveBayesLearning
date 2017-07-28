@@ -1,26 +1,28 @@
-<div class="container">
+<div class="bg">
+  <div class="container">
     <header>
-        <a href="#!/">Predict</a>
-        <h1>Bayes Machine Learning</h1>
-        <h2>Teaching Module</h2>
+      <a href="#!/">Predict</a>
+      <h1>Bayes Machine Learning</h1>
+      <h2>Teaching Module</h2>
     </header>
     <form>
-        <div class="form-group">
-            <label for="teachingtext">Lets Teach our computer:</label>
-            <textarea class="form-control" id="teachingtext" rows="3" ng-model="teachtext" autofocus></textarea>
-        </div>
-        <fieldset class="form-group">
-            <div class="form-check">
-                <label class="form-check-label">
+      <div class="form-group">
+        <label for="teachingtext">Let's Teach our computer:</label>
+        <textarea class="form-control" id="teachingtext" rows="3" ng-model="teachtext" autofocus></textarea>
+      </div>
+      <fieldset class="form-group">
+        <div class="form-check">
+          <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="teachMood1" id="positive" ng-model="mood" value="positive" ng-init="mood='positive'"> Positive
                 </label>
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="teachMood2" id="negative" ng-model="mood" value="negative"> Negative
                 </label>
-            </div>
-        </fieldset>
-        <button type="submit" ng-click="teach(teachtext,mood)" class="btn btn-primary">Teach!</button>
+        </div>
+      </fieldset>
+      <button type="submit" ng-click="teach(teachtext,mood)" class="btn btn-primary">Teach!</button>
     </form>
+  </div>
 </div>
