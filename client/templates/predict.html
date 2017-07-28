@@ -1,17 +1,37 @@
 <div class="bg">
-    <div class="container">
-        <!-- <p>{{ 4 + 3 }}</p> -->
-        <header >
-            <a href="#!/teach">Teach</a>
-            <h1>Bayes Machine Learning</h1>
-            <h2>Prediction Module</h2>
-        </header>
-        <form>
-            <div class="form-group">
-                <label for="sampletext">Enter text to analyse:</label>
-                <textarea class="form-control" id="sampletext" rows="3" ng-model="predicttext" autofocus></textarea>
-            </div>
-            <button type="submit" ng-click="predict(predicttext)" class="btn btn-primary">Submit!</button>
-        </form>
+  <div class="container">
+    <header>
+      <a href="#!/teach">Teach</a>
+      <h1>Bayes Machine Learning</h1>
+      <h2>Prediction Module</h2>
+    </header>
+    <form>
+      <div class="form-group">
+        <label for="sampletext">Enter text to analyse:</label>
+        <textarea class="form-control" id="sampletext" rows="3" ng-model="predicttext" autofocus></textarea>
+      </div>
+      <button type="submit" ng-click="predict(predicttext)" class="btn btn-primary">Submit!</button>
+    </form>
+    <div class="result" ng-if="prediction.result === 'positive'">
+      <h4>Analysis result:</h4>
+      <h2>{{prediction.result}}</h2>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="{{'width:' + probability + '%'}}" aria-valuenow="{{probability}}" aria-valuemin="0" aria-valuemax="100">{{probability}} %</div>
+      </div>
     </div>
+    <div class="result" ng-if="prediction.result === 'negative'">
+      <h4>Analysis result:</h4>
+      <h2>{{prediction.result}}</h2>
+      <div class="progress">
+        <div class="progress-bar bg-danger" role="progressbar" style="{{'width:' + probability + '%'}}" aria-valuenow="{{probability}}" aria-valuemin="0" aria-valuemax="100">{{probability}} %</div>
+      </div>
+    </div>
+    <div class="result" ng-if="prediction.result === 'unknown'">
+      <h4>Analysis result:</h4>
+      <h2>{{prediction.result}}</h2>
+      <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" style="{{'width:' + probability + '%'}}" aria-valuenow="{{probability}}" aria-valuemin="0" aria-valuemax="100">{{probability}} %</div>
+      </div>
+    </div>
+  </div>
 </div>

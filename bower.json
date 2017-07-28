@@ -1,15 +1,17 @@
 {
-  "name": "twitter_sentiment_bot",
-  "description": "An app that measures the general sentiment for a given topic on twitter",
+  "name": "Naive-Bayes_Text_Sentiment_Predictor",
+  "description": "Naive-Bayes text classifier",
   "main": "index.js",
   "authors": [
     "SG"
   ],
   "license": "ISC",
   "keywords": [
-    "BigData"
+    "BigData",
+    "MachineLearning",
+    "NaiveBayes"
   ],
-  "homepage": "https://github.com/sgarmendia/twitterSentimentBot",
+  "homepage": "https://github.com/sgarmendia/naiveBayesLearning",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0",
     "angular": "^1.6.5"
   }
 }
