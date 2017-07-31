@@ -4,16 +4,20 @@ A simple app for testing *Machine Learning* with **[Naive Bayes Algorithm](https
 
 ## Install application
 
-In order to install the NBTC app in your computer you will need **[node.js](https://nodejs.org/en/)**
+In order to install the NBTC app in your computer you will need **[node.js](https://nodejs.org/en/)** and **[bower](https://bower.io/)**
 
-Clone this repository on the chosen parent folder.
-
-On the terminal please install the required packages:
+If you have installed node.js, you may install the bower package manager by writing on the terminal:
 
 ```
-$ npm install
+$ npm install -g bower
+```
 
-$ bower install
+Now you are ready to **clone this repository** on the chosen parent folder and go to the app folder.
+
+```
+$ git clone https://github.com/sgarmendia/naiveBayesLearning
+
+$ cd naiveBayesLearning
 ```
 
 And run the application:
