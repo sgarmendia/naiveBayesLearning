@@ -4,36 +4,31 @@ const fs = require('fs')
 
 function teachSentiment(req, res) {
 
-    const { teachtext, mood } = req.body
+    const {
+        teachtext,
+        mood
+    } = req.body
 
-    const aText = teachtext.split(' ')
+    nbc.definePrepTasks([
+        // Simple tokenizer
+        nlp.string.tokenize,
+        // Propagate the effect of negation to the next word
+        nlp.tokens.propagateNegations,
+        // Common Stop Words Remover
+        nlp.tokens.removeWords,
+        // Stemmer to obtain base word
+        nlp.tokens.stem
+    ])
 
-    let json = JSON.parse(fs.readFileSync('./learning/learnJson.json', 'utf8'))
+    nbc.importJSON(fs.readFileSync('./learning/learnJson.json', 'utf-8'))
 
-    json[1][mood] += 1
-    let oMood = json[2][mood]
-    let sumMood = 0
+    nbc.learn(teachtext, mood)
 
-    aText.forEach(word => {
+    const json = nbc.exportJSON()
 
-        oMood[word] ? oMood[word] += 1 : oMood[word] = 1
+    fs.writeFileSync( './learning/learnJson.json', json , 'utf-8' )
 
-        if (json[4].indexOf(word) < 0) json[4].push(word)
-
-    })
-
-    for (let key in oMood) {
-
-        sumMood += oMood[key] 
-
-    }
-
-    json[3][mood] = sumMood
-
-    const sJson = JSON.stringify(json)
-    fs.writeFile('./learning/learnjson.json', sJson, err => { if (err) throw err })
-
-    res.send(sJson)
+    res.send(json)
 
 }
 
